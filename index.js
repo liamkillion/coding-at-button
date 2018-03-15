@@ -44,7 +44,7 @@
  //   ["+", "1", "+", "2", "3"]
  //   ["+", "+", "1", "2", "3"]
 
- let expressionEvaluator = function(expression) {
+ module.exports.expressionEvaluator = function(expression) {
    let array = expression.split(" ")
    let operations = []
    let numerals = []
@@ -61,9 +61,7 @@
      newArray.push(operations[i])
    }
    let solution = newArray.join('')
-   return eval(solution)
+   console.log(eval(solution));
  }
 
- export {
-   expressionEvaluator
- }
+ // node -e 'require("./index").expressionEvaluator(<expression>)'
