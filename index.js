@@ -63,5 +63,5 @@
    let solution = newArray.join('')
    console.log(eval(solution));
  }
-
+ // to run
  // node -e 'require("./index").expressionEvaluator(<expression>)'
