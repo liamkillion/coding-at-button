@@ -5,11 +5,35 @@
     <title>Coding At Buttom</title>
   </head>
   <body>
-    <p>Enter a space-delimited string in this format <operation> <expression> <expression> and click submit to have it evaluated!</p>
-    <p>Expressions can either be numbers or operator expressions Expressions can be numbers or operator expressions (4 is an expression and so is - 3 1)</p>
+    <p>Enter a space-delimited string in this format OPEARTION EXPRESSION EXPRESSION and click Evaluate to have it evaluated!</p>
+    <p>Expressions can either be numbers or operator expressions Expressions can be numbers or operator expressions (<strong>4</strong> is an expression and so is <strong>- 3 1</strong>)</p>
     <input type="text" name="input" id="input"></input>
     <button type="submit" name="button" id="submit">Evaluate</button>
+    <p>Your expression evaluates to:</p>
     <p id="output"></p>
+    <br>
+    <p>The Javascript for this expression is:</p>
+    <pre><code>
+      function expressionEvaluator(expression) {
+        let array = expression.split(" ")
+        let operations = []
+        let numerals = []
+        array.forEach(element => {
+          if (parseInt(element)) {
+            numerals.push(element)
+          } else {
+            operations.push(element)
+          }
+        })
+        let newArray = []
+        for (i = 0; i < numerals.length; i++) {
+          newArray.push(numerals[i])
+          newArray.push(operations[i])
+        }
+        let solution = newArray.join('')
+        return eval(solution)
+      }
+    </code></pre>
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

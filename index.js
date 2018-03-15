@@ -25,7 +25,6 @@ let input = document.getElementById('input')
 let output = document.getElementById('output')
 
 function showValue() {
-  console.log(input.value)
   output.innerHTML = expressionEvaluator(input.value)
 }
 
