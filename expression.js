@@ -1,4 +1,4 @@
- //  <operation> <expression> <expres sion>
+ //  <operation> <expression> <expression>
  // "+ 1 + 2 3" === 6
  //
  //   ["+", "1", "+", "2", "3"]
@@ -26,7 +26,7 @@
    return eval(solution)
  }
 
- module.exports.expressionEvaluator = expressionEvaluator
+ // module.exports.expressionEvaluator = expressionEvaluator
 
 
  // to run
